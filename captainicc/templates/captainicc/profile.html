@@ -1,0 +1,44 @@
+{% extends 'captainicc/index.html' %}
+{% load static %}
+{% block title %} Ajouter membre {% endblock title %}
+
+{% block body %}
+<div class="row">
+    {% for membre in membres %}
+    <div class="col-lg-4 col-md-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center"> 
+                    <img src="{{ membre.mb_photo.url }}" class="rounded-circle" width="150" height="150" />
+                    <h4 class="card-title mt-10">{{ membre.mb_nom }} {{ membre.mb_prenoms }}</h4>
+                    <p class="card-subtitle">{{ membre.libelle_situa }}</p>
+                    <div class="row text-center justify-content-md-center">
+                        <div class="col-4 mt-10"><a href="javascript:void(0)" class="link">
+                            <h6>{{ membre.mb_categoryMembres }}</h6></a>
+                        </div>
+                        <div class="col-4 mt-10"><a href="javascript:void(0)" class="link">
+                          <h6> {% for pole in membre.mb_pole.all %}
+                            {{ pole }}
+                           {% endfor %}</h6></a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <hr class="mb-0"> 
+            <div class="card-body"> 
+                <small class="text-muted d-block">Profession</small>
+                <h6>{{ membre.mb_profession }}</h6> 
+                <small class="text-muted d-block">Email</small>
+                <h6>{{ membre.mb_email }}</h6> 
+                <small class="text-muted d-block pt-10">Mobile</small>
+                <h6>{{ membre.mb_mobile }}</h6> 
+                <small class="text-muted d-block pt-10">Adresse</small>
+                <h6>{{ membre.mb_adresse }}, {{ membre.mb_code_postal }}, {{ membre.mb_ville.nom_ville }}</h6>
+                
+                
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}

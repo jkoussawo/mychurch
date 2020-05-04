@@ -1,0 +1,192 @@
+{% extends 'captainicc/index.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% load crispy_forms_tags %}
+{% block title %} Ajouter membre {% endblock title %}
+
+
+{% block filescss %}
+
+<link rel="stylesheet" href="{% static 'plugins/bootstrap/dist/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/ionicons/dist/css/ionicons.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/icon-kit/dist/css/iconkit.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/perfect-scrollbar/css/perfect-scrollbar.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/select2/dist/css/select2.min.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/summernote/dist/summernote-bs4.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/mohithg-switchery/dist/switchery.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/theme.min.css' %}">
+
+
+
+{% endblock filescss %}
+
+{% block body %}
+
+<div class="row">
+
+    <div class="col-md-10 offset-md-1">
+        <div class="card">
+            <div class="card-header">
+                <h3>Ajouter un membre</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" class="sample-form" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                
+                                {{ membreForm.mb_nom|as_crispy_field }}
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_prenoms|as_crispy_field }}
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_date_naissance|as_crispy_field }}
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              
+                                {{ membreForm.mb_mobile|as_crispy_field }}
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_adresse|as_crispy_field }}
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_ville|as_crispy_field }}
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_code_postal|as_crispy_field }}
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_telephone|as_crispy_field }}
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              
+
+                                {{ membreForm.mb_profession|as_crispy_field }}
+
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_situation|as_crispy_field }}
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_email|as_crispy_field }}
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                
+                                {{ membreForm.mb_sexe|as_crispy_field }}
+                             
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+
+                                {{ membreForm.mb_categoryMembres|as_crispy_field }}
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                               
+                                {{ membreForm.mb_pole|as_crispy_field }}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+
+                        {{ membreForm.mb_photo|as_crispy_field }}
+
+                        
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock body %}
+
+{% block filesjs %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="{% static 'plugins/popper.js/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js' %}"></script>
+<script src="{% static 'plugins/select2/dist/js/select2.min.js' %}"></script>
+<script src="{% static 'plugins/summernote/dist/summernote-bs4.min.js' %}"></script>
+<script src="{% static 'plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js' %}"></script>
+<script src="{% static 'plugins/jquery.repeater/jquery.repeater.min.js' %}"></script>
+<script src="{% static 'plugins/mohithg-switchery/dist/switchery.min.js' %}"></script>
+<script src="{% static 'js/theme.min.js' %}"></script>
+<script src="{% static 'js/form-advanced.js' %}"></script>
+<script src="{% static 'js/form-components.js' %}"></script>
+<script src="{% static 'js/form-picker.js' %}"></script>
+<script src="{% static 'js/forms.js' %}"></script>
+
+{% endblock filesjs %}
