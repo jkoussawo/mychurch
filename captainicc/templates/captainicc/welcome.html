@@ -1,0 +1,477 @@
+{% extends 'captainicc/index.html' %}
+{% load static %}
+
+
+{% block body %}
+
+
+
+
+<div class="row">
+
+    <div class="col-md-10 offset-md-1">
+        <div class="card">
+            <div class="card-header">
+                <h3>{{ infos }}</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" class="sample-form" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio   radiofill radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>Mr
+                                        </label>
+                                    </div>
+                                    <div class="radio  radiofill radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>Mme
+                                        </label>
+                                    </div>
+                                    <div class="radio  radiofill radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>Mlle
+                                        </label>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Nom</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Nom">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Prénoms</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Prénoms">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="exampleInputName1">Adresse</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Adresse">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Code Postal</label>
+                                <input type="email" class="form-control" id="exampleInputEmail3"
+                                    placeholder="Code postal">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputVille">Ville</label>
+                                <input type="email" class="form-control" id="exampleInputVille" placeholder="Ville">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Téléphone / Mobile</label>
+                                <input type="email" class="form-control" id="exampleInputEmail3"
+                                    placeholder="Telephone/Mobile">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>J'ai été invité(e) par : </h5>
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>Une connaissance (ami, famille, etc.)</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Flyer, affiche,etc</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>Internet</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Presse</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>TV</h6>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Tranche d'âge : </h5>
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>Moins de 18 ans</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>18-24 ans</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>25-30 ans</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>31-35 ans</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>36-40 ans</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>41-45 ans</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>46-50 ans</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Plus de 50 ans</h6>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Mon état civil : </h5>
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>Célibataire</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Marié(e)</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>En couple</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Pascé(e)</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Séparé(e)</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Veuf(ve)</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Divorcé(e)</h6>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Avez-vous accepté Jésus-Christ comme Seigneur et Sauveur ? </h5>
+                            <form>
+                                <div class="form-radio">
+
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>Oui
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>Non
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </form>
+                            <h6>Si Oui, quand ? : ____/____/____ (JJ/MM/AAAA)</h6>
+                            <h6>Si Non,, souhaitez-vous être accompagné(e) dans cette démarche ? </h6>
+                            <form>
+                                <div class="form-radio">
+
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>Oui
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>Non
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Avez-vous été baptisé(e) par immersion ? </h5>
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>Oui
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>Non
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Avez-vous une église habituelle ? </h5>
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>Oui
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>Non
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Si non, souhaitez-vous intégrer la famille Impact Centre Chrétien ? </h5>
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>Oui
+                                        </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>Non
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Vous souhaitez intégrer ICC , désirez-vous : </h5>
+                            <div class="form-radio">
+                                <form>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio" checked="checked">
+                                            <i class="helper"></i>
+                                            <h6>Etre contacté par téléphone par un leader ICC ou prendre un rendez-vous
+                                            </h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Intégrer un Groupe d'Impact (groupes de maison) </h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6> Etre inscrit à la prochaine session du Cours 101 : Les fondements du
+                                                Royaume </h6>
+                                        </label>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-radio">
+                                <h5>Dans tous les cas, souhaitez vous recevoir des informations sur : </h5>
+                                <form>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Les fondements du Royaume - Cours 101 </h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6>Le Groupe d'Impact le plus proche de chez vous</h6>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="radio">
+                                            <i class="helper"></i>
+                                            <h6> Les prochains évenements (séminaires, conférences, sorties,...) </h6>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                           
+                            <div class="form-group">
+                                <label for="exampleTextarea1"> <h5>Avez-vous une attente, un besoin particulier, un commentaire ? </h5></label>
+                                <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                            </div>
+                          
+
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock body %}

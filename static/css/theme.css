@@ -694,6 +694,7 @@ a:hover, a:focus, a:active { outline: 0; text-decoration: none; color: #212121; 
 .card-blue .ct-line { stroke: #fff; }
 .card-blue .ct-grid { stroke: #4da3ff; }
 .card-green::after { background: #2dce89; }
+.card-violet::after { background: #6E48AA; }
 .card-green .ct-line { stroke: #fff; }
 .card-green .ct-grid { stroke: #69deac; }
 .card-yellow::after { background: #fb6340; }

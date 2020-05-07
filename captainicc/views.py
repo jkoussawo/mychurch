@@ -44,3 +44,9 @@ def list_membre_profile(request):
         'membres' : membres,
     }
     return render(request,'captainicc/profile.html',context)
+
+
+def welcome(request):
+    
+
+    return render(request,'captainicc/welcome.html',{ 'infos' : 'Bienvenue à ICC' })

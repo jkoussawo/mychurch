@@ -15,7 +15,7 @@
                         <p class="mb-0">DERNIER CULTE</p>
                     </div>
                     <div class="col-4 text-right">
-                        <i class="ik ik-user f-30"></i>
+                        <i class="ik ik-users f-30"></i>
                     </div>
                 </div>
                 <div id="Widget-line-chart1" class="chart-line chart-shadow" style="width:100%;height:75px"></div>
@@ -31,7 +31,7 @@
                         <p class="mb-0">STAR</p>
                     </div>
                     <div class="col-4 text-right">
-                        <i class="ik ik-shopping-cart f-30"></i>
+                        <i class="ik ik-users f-30"></i>
                     </div>
                 </div>
                 <div id="Widget-line-chart2" class="chart-line chart-shadow" style="width:100%;height:75px"></div>
@@ -47,7 +47,7 @@
                         <p class="mb-0">NOUVEAUX</p>
                     </div>
                     <div class="col-4 text-right">
-                        <i class="ik ik-thumbs-up f-30"></i>
+                        <i class="ik ik-user-plus f-30"></i>
                     </div>
                 </div>
                 <div id="Widget-line-chart3" class="chart-line chart-shadow" style="width:100%;height:75px"></div>
@@ -63,7 +63,7 @@
                         <p class="mb-0">MEMBRES</p>
                     </div>
                     <div class="col-4 text-right">
-                        <i class="ik ik-volume-2 f-30"></i>
+                        <i class="ik ik-users f-30"></i>
                     </div>
                 </div>
                 <div id="Widget-line-chart4" class="chart-line chart-shadow" style="width:100%;height:75px"></div>
@@ -238,7 +238,7 @@
                         </td>
                         <td>{{ membre.mb_mobile }}</td>
                         <td> {% for pole in membre.mb_pole.all %}
-                            <label class="badge badge-danger">{{ pole }}</label> 
+                            <label class="badge {% if membre.mb_categoryMembres.type_membre == 'STAR' %}badge-danger{% else %}badge-dark{% endif %}">{{ pole }}</label> 
                             {% endfor %}</td>
                         <td>{{ membre.mb_email }}</td>
                         <td>
